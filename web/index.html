@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading List</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+      form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+      form input { flex: 1; padding: 0.4rem; }
+      ul { list-style: none; padding: 0; }
+      li { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0; border-bottom: 1px solid #ddd; }
+      li .text { flex: 1; }
+      li.read .text { text-decoration: line-through; color: #888; }
+      #error { color: #b00020; min-height: 1.25rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Reading List</h1>
+    <form id="add-form">
+      <input id="title" placeholder="Title" aria-label="Title" />
+      <input id="author" placeholder="Author" aria-label="Author" />
+      <button type="submit">Add</button>
+    </form>
+    <p id="error" role="alert"></p>
+    <ul id="books"></ul>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
